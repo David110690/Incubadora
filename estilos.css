@@ -1,0 +1,239 @@
+:root{
+    --colorTextos: #49454567;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F1F2B5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.formulario {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height:650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+form{
+    background: #fff;
+    width: 30%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+input, textarea{
+    background: none;
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+}
+
+input:focus,textarea:focus{
+    outline: none;
+    color: rgb(94,93,93);
+}
+
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #2196F3;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+
+input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    transition: 0.3s ease all;
+    left: 0%;
+}
+button{
+    background: #F1F2B5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 100px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+/*Estilos para el footer*/
+.contacto {
+	font-family: "Inconsolata" , sans-serif;
+	font-size: 35px;
+	padding-top: 10px;
+	color: white;
+}
+
+.separador {
+	width: 56px;
+	margin-bottom: 7px ;
+	margin-left: 48%;
+	border-top: 2px solid #023547;
+}
+.final {
+	padding-top: 0;
+	color: white;
+	font-family: "LubalinGraphStdBook", sans-serif;
+	font-size: 20px;
+}
+.final h3 {
+	margin-top: 0;
+}
+.ico-contacto {
+	color: white;
+	font-family: "Inconsolata" , sans-serif;
+}
+.ico-contacto span {
+	font-family: "Inconsolata" , sans-serif;
+	font-size: 21px;
+}
+.ico-contacto a {
+	color: white;
+	font-size: 21px;
+}
+
+.bg-green {
+	background: #F1F2B5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	padding: 1em 0em;
+	color: white;
+	font-family: "Inconsolata" , sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+}
+.bg-green a {
+	text-decoration: none;
+	color: white
+}
+.bg-green i {
+	float: right;
+}
+
+
+.contacto {
+	font-family: "Inconsolata" , sans-serif;
+	font-size: 35px;
+	padding-top: 10px;
+	color: white;
+}
+.ico-contacto {
+	color: white;
+	font-family: "Inconsolata" , sans-serif;
+}
+.ico-contacto span {
+	font-family: "Inconsolata" , sans-serif;
+	font-size: 21px;
+}
+.ico-contacto a {
+	color: white;
+	font-size: 21px;
+}
+.final , .ico-contacto a {
+    font-size: 18px
+}
+
+.final {
+	padding-top: 0;
+	color: white;
+	font-family: "LubalinGraphStdBook", sans-serif;
+	font-size: 20px;
+}
+.final h3 {
+	margin-top: 0;
+}
+
+/*final estilos footer*/
+
+@media screen and (max-width:1100px){
+    form{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px){
+    form{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:450px){
+    form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:300px){
+    form{
+        width: 90%;
+    }
+}
